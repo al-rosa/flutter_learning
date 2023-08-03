@@ -1,16 +1,15 @@
 # flutter_learning
 
-A new Flutter project.
+Flutterを学習するためのリポジトリー
 
-## Getting Started
+## フォルダー構成
 
-This project is a starting point for a Flutter application.
+学習領域ごとにフォルダーを分けている
 
-A few resources to get you started if this is your first Flutter project:
+### ui
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+気になったUIをFlutterで実装してみた
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### state_management
+
+状態管理について（主にriverpod）
