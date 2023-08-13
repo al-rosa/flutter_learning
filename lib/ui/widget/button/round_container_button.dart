@@ -8,14 +8,12 @@ class RoundContainerButton extends StatelessWidget {
     super.key,
   });
 
-  final Function onTap;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        onTap;
-      },
+      onTap: onTap,
       child: const RoundContainer(
         title: "円形のボタン",
       ),
