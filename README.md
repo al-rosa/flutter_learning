@@ -10,8 +10,10 @@ Flutterを学習するためのリポジトリー
 
 気になったUIをFlutterで実装してみた
 
-- RoundContainer
-  - [zenn](https://zenn.dev/al_rosa/articles/7a3754d7ac5825)
+- RoundContainer（round_container.dart）
+  - [zenn（【Flutter】ClipPathを使って楕円のContainerを作成した）](https://zenn.dev/al_rosa/articles/7a3754d7ac5825)
+- GlassContainer（glass_container.dart）
+  - [zenn（【Flutter】glassmorphismを作成した）](https://zenn.dev/al_rosa/articles/70c2e647e88f56)
 
 ### state_management
 
