@@ -20,6 +20,11 @@ Flutterを学習するためのリポジトリー
 
 <img src="https://storage.googleapis.com/zenn-user-upload/954adbad10f7-20230818.png" width="250">
 
+- CircleShineButton（circle_shine_button.dart）
+  - [zenn（【Flutter】光っているボタンを作成した）](https://zenn.dev/al_rosa/articles/de415da57ef61e)
+
+<img src="https://storage.googleapis.com/zenn-user-upload/3a89b7ea8b1d-20230908.png" width="250">
+
 ### state_management
 
 状態管理について（主にriverpod）
