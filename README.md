@@ -35,3 +35,8 @@ Flutterを学習するためのリポジトリー
   - [【Flutter】slangを使って多言語対応をしよう](https://zenn.dev/al_rosa/articles/0190852ede7672)
 
 ![](https://storage.googleapis.com/zenn-user-upload/e05bf92e4a82-20230928.gif)
+
+- LocalizationsTestScreen(scroll_notification_test.dart)
+  - [ScrollNotificationを使ってスクロール位置を検知した。](https://zenn.dev/al_rosa/articles/ebfa6ec4a9eec6)
+
+![](https://storage.googleapis.com/zenn-user-upload/7e7350fc7182-20230927.gif)
