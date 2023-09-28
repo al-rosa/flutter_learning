@@ -28,3 +28,10 @@ Flutterを学習するためのリポジトリー
 ### state_management
 
 状態管理について（主にriverpod）
+
+### その他
+
+- LocalizationsTestScreen（localizations_test_screen.dart）
+  - [【Flutter】slangを使って多言語対応をしよう](https://zenn.dev/al_rosa/articles/0190852ede7672)
+
+![](https://storage.googleapis.com/zenn-user-upload/e05bf92e4a82-20230928.gif)
