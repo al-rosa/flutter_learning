@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'i18n/strings.g.dart';
 
-class LocalizationsTestScreen extends StatefulWidget {
-  const LocalizationsTestScreen({Key? key}) : super(key: key);
+class LocalizationGeoData extends StatefulWidget {
+  const LocalizationGeoData({Key? key}) : super(key: key);
 
   @override
-  State<LocalizationsTestScreen> createState() =>
-      _LocalizationsTestScreenState();
+  State<LocalizationGeoData> createState() => _LocalizationRadioState();
 }
 
-class _LocalizationsTestScreenState extends State<LocalizationsTestScreen> {
+class _LocalizationRadioState extends State<LocalizationGeoData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(t.mainScreen.title),
+        title: Text(i18n.strings.geoTable.title),
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -23,13 +22,17 @@ class _LocalizationsTestScreenState extends State<LocalizationsTestScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextButton(
-              onPressed: () {},
-              child: Text(t.mainScreen.signIn),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(t.mainScreen.signOut),
+            DataTable(
+              columns: [
+                DataColumn(label: Text(i18n.strings.geoTable.country)),
+                DataColumn(label: Text(i18n.strings.geoTable.capital)),
+              ],
+              rows: i18n.strings.geoTable.nationCityPairs.entries.map((pair) {
+                return DataRow(cells: [
+                  DataCell(Text(pair.key)),
+                  DataCell(Text(pair.value)),
+                ]);
+              }).toList(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -39,17 +42,21 @@ class _LocalizationsTestScreenState extends State<LocalizationsTestScreen> {
                     LocaleSettings.setLocale(AppLocale.en);
                     setState(() {});
                   },
-                  child: const Text("English"),
+                  child: const Text(
+                    'English',
+                  ),
                 ),
                 TextButton(
                   onPressed: () {
                     LocaleSettings.setLocale(AppLocale.ja);
                     setState(() {});
                   },
-                  child: const Text("日本語"),
+                  child: const Text(
+                    '日本語',
+                  ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -7,5 +7,22 @@
     "locales(map)": {
         "en": "英語",
         "ja": "日本語"
+    },
+    "evaluation": [
+        "大変良い",
+        "良い",
+        "普通",
+        "悪い",
+        "大変悪い"
+    ],
+    "geoTable": {
+        "title": "国と首都",
+        "country": "国",
+        "capital": "首都",
+        "nationCityPairs(map)": {
+            "アメリカ": "ワシントン D.C.",
+            "日本": "東京",
+            "フランス": "パリ"
+        }
     }
 }

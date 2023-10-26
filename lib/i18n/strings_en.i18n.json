@@ -1,0 +1,28 @@
+{
+    "mainScreen": {
+        "title": "title",
+        "signIn": "sign in",
+        "signOut": "sign out"
+    },
+    "locales(map)": {
+        "en": "en",
+        "ja": "ja"
+    },
+    "evaluation": [
+        "Excellent",
+        "Good",
+        "Fair",
+        "Poor",
+        "Very Poor"
+    ],
+    "geoTable": {
+        "title": "Nation and City",
+        "country": "country",
+        "capital": "capital",
+        "nationCityPairs(map)": {
+            "USA": "Washington, D.C.",
+            "Japan": "Tokyo",
+            "France": "Paris"
+        }
+    }
+}

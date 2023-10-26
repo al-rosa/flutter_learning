@@ -32,9 +32,10 @@ class ViewScreen extends HookWidget {
                     )
                   : null,
               titleTextStyle: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17),
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 17,
+              ),
               backgroundColor: Colors.white.withAlpha(125),
               pinned: true,
               stretch: true,
