@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'i18n/strings.g.dart';
+import '../i18n/strings.g.dart';
 
-class LocalizationRadio extends StatefulWidget {
-  const LocalizationRadio({Key? key}) : super(key: key);
+class LocalizationSomeKey extends StatefulWidget {
+  const LocalizationSomeKey({Key? key}) : super(key: key);
 
   @override
-  State<LocalizationRadio> createState() => _LocalizationRadioState();
+  State<LocalizationSomeKey> createState() => _LocalizationRadioState();
 }
 
-class _LocalizationRadioState extends State<LocalizationRadio> {
-  Evaluation? _evaluation = Evaluation.excellent;
-
+class _LocalizationRadioState extends State<LocalizationSomeKey> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(i18n.strings.mainScreen.title),
+        title: Text(i18n.strings.someKey.title),
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -25,22 +23,16 @@ class _LocalizationRadioState extends State<LocalizationRadio> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
-              child: ListView.builder(
-                itemCount: Evaluation.values.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    title: Text(i18n.strings.evaluation[index]),
-                    leading: Radio<Evaluation>(
-                      value: Evaluation.values[index],
-                      groupValue: _evaluation,
-                      onChanged: (Evaluation? value) {
-                        setState(() {
-                          _evaluation = value;
-                        });
-                      },
-                    ),
-                  );
-                },
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(i18n.strings.someKey.notification(
+                      n: 0)), // No notification has arrived 　または 通知は来ていません
+                  Text(i18n.strings.someKey.notification(
+                      n: 1)), // 1 notification has been received　または 1 件の通知が届いています
+                  Text(i18n.strings.someKey.notification(
+                      n: 2)), // 2 notifications has been received　または 2 件の通知が届いています
+                ],
               ),
             ),
             Row(
@@ -72,12 +64,4 @@ class _LocalizationRadioState extends State<LocalizationRadio> {
       ),
     );
   }
-}
-
-enum Evaluation {
-  excellent,
-  good,
-  fair,
-  poor,
-  veryPoor,
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'i18n/strings.g.dart';
-import 'localization_ geo_data.dart';
+import 'localization/localization_some_key.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LocalizationGeoData(),
+      home: const LocalizationSomeKey(),
     );
   }
 }

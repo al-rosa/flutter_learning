@@ -29,10 +29,14 @@ Flutterを学習するためのリポジトリー
 
 状態管理について（主にriverpod）
 
-### その他
+### localization
 
 - LocalizationsTestScreen（localizations_test_screen.dart）
   - [【Flutter】slangを使って多言語対応をしよう](https://zenn.dev/al_rosa/articles/0190852ede7672)
+- localization（localizations_*.dart）
+  - [【Flutter】slangパッケージの便利な機能（多言語対応）](https://zenn.dev/al_rosa/articles/19a0443f8cf3d4)
+
+### その他
 
 ![](https://storage.googleapis.com/zenn-user-upload/e05bf92e4a82-20230928.gif)
 

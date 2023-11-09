@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 32 (16 per locale)
+/// Strings: 39 (19 per locale)
 ///
-/// Built on 2023-10-26 at 02:33 UTC
+/// Built on 2023-11-09 at 02:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -173,6 +173,7 @@ class _StringsStringsJa {
 		'大変悪い',
 	];
 	late final _StringsStringsGeoTableJa geoTable = _StringsStringsGeoTableJa._(_root);
+	late final _StringsStringsSomeKeyJa someKey = _StringsStringsSomeKeyJa._(_root);
 }
 
 // Path: strings.mainScreen
@@ -202,6 +203,20 @@ class _StringsStringsGeoTableJa {
 		'日本': '東京',
 		'フランス': 'パリ',
 	};
+}
+
+// Path: strings.someKey
+class _StringsStringsSomeKeyJa {
+	_StringsStringsSomeKeyJa._(this._root);
+
+	final _StringsJa _root; // ignore: unused_field
+
+	// Translations
+	String get title => '通知';
+	String notification({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('ja'))(n,
+		zero: '通知は来ていません',
+		other: '${n} 件の通知が届いています',
+	);
 }
 
 // Path: <root>
@@ -252,6 +267,7 @@ class _StringsStringsEn implements _StringsStringsJa {
 		'Very Poor',
 	];
 	@override late final _StringsStringsGeoTableEn geoTable = _StringsStringsGeoTableEn._(_root);
+	@override late final _StringsStringsSomeKeyEn someKey = _StringsStringsSomeKeyEn._(_root);
 }
 
 // Path: strings.mainScreen
@@ -283,6 +299,21 @@ class _StringsStringsGeoTableEn implements _StringsStringsGeoTableJa {
 	};
 }
 
+// Path: strings.someKey
+class _StringsStringsSomeKeyEn implements _StringsStringsSomeKeyJa {
+	_StringsStringsSomeKeyEn._(this._root);
+
+	@override final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'notification';
+	@override String notification({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n,
+		zero: 'No notification has arrived',
+		one: '${n} notification has been received',
+		other: '${n} notifications has been received',
+	);
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -305,6 +336,11 @@ extension on _StringsJa {
 			case 'strings.geoTable.nationCityPairs.アメリカ': return 'ワシントン D.C.';
 			case 'strings.geoTable.nationCityPairs.日本': return '東京';
 			case 'strings.geoTable.nationCityPairs.フランス': return 'パリ';
+			case 'strings.someKey.title': return '通知';
+			case 'strings.someKey.notification': return ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('ja'))(n,
+				zero: '通知は来ていません',
+				other: '${n} 件の通知が届いています',
+			);
 			default: return null;
 		}
 	}
@@ -329,6 +365,12 @@ extension on _StringsEn {
 			case 'strings.geoTable.nationCityPairs.USA': return 'Washington, D.C.';
 			case 'strings.geoTable.nationCityPairs.Japan': return 'Tokyo';
 			case 'strings.geoTable.nationCityPairs.France': return 'Paris';
+			case 'strings.someKey.title': return 'notification';
+			case 'strings.someKey.notification': return ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n,
+				zero: 'No notification has arrived',
+				one: '${n} notification has been received',
+				other: '${n} notifications has been received',
+			);
 			default: return null;
 		}
 	}

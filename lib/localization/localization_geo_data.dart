@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'i18n/strings.g.dart';
+import '../i18n/strings.g.dart';
 
 class LocalizationGeoData extends StatefulWidget {
   const LocalizationGeoData({Key? key}) : super(key: key);

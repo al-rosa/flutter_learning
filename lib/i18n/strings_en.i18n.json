@@ -24,5 +24,13 @@
             "Japan": "Tokyo",
             "France": "Paris"
         }
+    },
+    "someKey": {
+        "title": "notification",
+        "notification": {
+            "zero": "No notification has arrived",
+            "one": "$n notification has been received",
+            "other": "$n notifications has been received"
+        }
     }
 }
